@@ -10,15 +10,15 @@ namespace UserRegistrationPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.First Name\n 2.Exit\n");
+                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.Last Name\n 2.Exit\n");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
-                        ValidateFN FirstName = new ValidateFN();
-                        Console.WriteLine("Enter the First Name to Check Validation:");
-                        string input = Console.ReadLine();
-                        FirstName.ValidateFirstName(input);
+                        ValidateLN LastName = new ValidateLN();
+                        Console.WriteLine("Enter the Last Name to Check Validation:");
+                        string Last = Console.ReadLine();
+                        LastName.ValidateLastName(Last);
                         break;
                     case 2:
                         flag = false;
