@@ -5,46 +5,26 @@ namespace UserRegistrationPrograms
 {
     class Program
     {
-        public string First_Name = "^[A-Z]{1}[A-Za-z]{3,}$";
-        public string Last_Name = "^[A-Z]{1}[A-Za-z]{3,}$";
-        public string Email = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
-        public void ValidateFirstName(string name)
+        static void Main(string[] args)
         {
-            Regex regex = new Regex(First_Name);
-            bool check = regex.IsMatch(name);
-            if (check)
+            Console.WriteLine("Welcome To User Registration\n");
+            bool flag = true;
+            while (flag)
             {
-                Console.WriteLine("Valid Name");
-            }
-            else
-            {
-                Console.WriteLine("Invalid!!");
-            }
-        }
-        public void ValidateLastName(string name)
-        {
-            Regex regex = new Regex(Last_Name);
-            bool check = regex.IsMatch(name);
-            if (check)
-            {
-                Console.WriteLine("Valid Last Name");
-            }
-            else
-            {
-                Console.WriteLine("Invalid!!");
-            }
-        }
-        public void ValidateMail(string mail)
-        {
-            Regex regex = new Regex(Email);
-            bool check = regex.IsMatch(mail);
-            if (check)
-            {
-                Console.WriteLine("Valid Mail Address");
-            }
-            else
-            {
-                Console.WriteLine("Invalid!!");
+                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.Email\n 2.Exit\n");
+                int choice = Convert.ToInt32(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        ValidateMail mail = new ValidateMail();
+                        Console.WriteLine("Enter the Email Address for Validation:");
+                        string Email = Console.ReadLine();
+                        mail.ValidateEmail(Email);
+                        break;
+                    case 2:
+                        flag = false;
+                        break;
+                }
             }
         }
     }
