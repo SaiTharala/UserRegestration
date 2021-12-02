@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace UserRegistrationPrograms
 {
-    class Program
+    class ValidateEmail
     {
         public string First_Name = "^[A-Z]{1}[A-Za-z]{3,}$";
         public string Last_Name = "^[A-Z]{1}[A-Za-z]{3,}$";
