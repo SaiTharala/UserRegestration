@@ -5,16 +5,16 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistrationPrograms
 {
-    class MobileFormat
+    class Password1
     {
-        public string Mobile = "^[0-9]{2}[ ]{1}[0-9]{10}$";
-        public void ValidateMobile(string number)
+        public string PasswordRule1 = @"[a-z,A-Z,0-9]{8,}$";     
+        public void ValidateRuleOne(string password)
         {
-            Regex regex = new Regex(Mobile);
-            bool check = regex.IsMatch(number);
+            Regex regex = new Regex(PasswordRule1);
+            bool check = regex.IsMatch(password);
             if (check)
             {
-                Console.WriteLine("Valid Mobile Number\n");
+                Console.WriteLine("Valid Password\n");
             }
             else
             {
