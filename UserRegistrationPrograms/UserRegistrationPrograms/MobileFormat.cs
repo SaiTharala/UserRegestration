@@ -5,16 +5,16 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistrationPrograms
 {
-    class ValidateMail
+    class MobileFormat
     {
-        public string Email = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$";
-        public void ValidateEmail(string mail)
+        public string Mobile = "^[0-9]{2}[ ]{1}[0-9]{10}$";
+        public void ValidateMobile(string number)
         {
-            Regex regex = new Regex(Email);
-            bool check = regex.IsMatch(mail);
+            Regex regex = new Regex(Mobile);
+            bool check = regex.IsMatch(number);
             if (check)
             {
-                Console.WriteLine("Valid Mail Address");
+                Console.WriteLine("Valid Mobile Number\n");
             }
             else
             {

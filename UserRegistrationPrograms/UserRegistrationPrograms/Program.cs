@@ -11,17 +11,17 @@ namespace UserRegistrationPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.Email\n 2.Exit\n");
+                Console.WriteLine("Enter your Choice Number to Validate Program\n 1.Mobile Number\n 2.Exit\n");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
-                    case 1:
-                        ValidateMail mail = new ValidateMail();
-                        Console.WriteLine("Enter the Email Address for Validation:");
-                        string Email = Console.ReadLine();
-                        mail.ValidateEmail(Email);
+                   case 1:
+                        MobileFormat num = new MobileFormat();
+                        Console.WriteLine("Enter the Mobile Number for Validation:");
+                        string number = Console.ReadLine();
+                        num.ValidateMobile(number);
                         break;
-                    case 2:
+                   case 2:
                         flag = false;
                         break;
                 }
