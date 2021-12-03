@@ -5,13 +5,13 @@ using System.Text.RegularExpressions;
 
 namespace UserRegistrationPrograms
 {
-    class Password1
+    class Password2
     {
-        public string PasswordRule1 = @"[a-z,A-Z,0-9]{8,}$";     
-        public void ValidateRuleOne(string password)
+        public string PasswordRule2 = "^(?=.*[A-Z])[0-9a-zA-Z]{8,}";
+        public void ValidateRuleTwo(string passwordtwo)
         {
-            Regex regex = new Regex(PasswordRule1);
-            bool check = regex.IsMatch(password);
+            Regex regex = new Regex(PasswordRule2);
+            bool check = regex.IsMatch(passwordtwo);
             if (check)
             {
                 Console.WriteLine("Valid Password\n");
